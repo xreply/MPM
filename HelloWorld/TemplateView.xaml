@@ -1,0 +1,40 @@
+﻿<UserControl
+    x:Class="MPM.TemplateView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MPM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Width="390">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="gridBgCol1" Width="5*"/>
+            <ColumnDefinition x:Name="gridBgCol2" Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="gridBgRow1" Height="2*"/>
+            <RowDefinition x:Name="gridBgRow2" Height="2*"/>
+            <RowDefinition x:Name="gridBgRow3" Height="2*"/>
+            <RowDefinition x:Name="gridBgRow4" Height="2*"/>
+            <RowDefinition x:Name="gridBgRow5" Height="2*"/>
+            <RowDefinition x:Name="gridBgRow6" Height="2*"/>
+            <RowDefinition x:Name="gridBgRow7" Height="2*"/>
+            <RowDefinition x:Name="gridBgRow8" Height="2*"/>
+            <RowDefinition x:Name="gridBgRow9" Height="2*"/>
+            <RowDefinition x:Name="gridBgRow10" Height="2*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Title Header" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <TextBlock Grid.Row="2" Text="Sample Text" FontSize="8" VerticalAlignment="Center" />
+        <RichEditBox Grid.Row="3" FontSize="8" PlaceholderText="Sample Input" MinWidth="0" MinHeight="0" VerticalAlignment="Center" />
+        <DatePicker Grid.Row="4" FontSize="8" HorizontalAlignment="Stretch" VerticalAlignment="Center" MinWidth="0" />
+        <Button Grid.Row="5" Content="Sample Button" FontSize="8" />
+        <CheckBox Grid.Row="6" Content="Sample CheckBox" FontSize="8" HorizontalAlignment="Left" VerticalContentAlignment="Center" MinWidth="0" MinHeight="0" />
+        <ComboBox Grid.Row="7" FontSize="8" Width="129">
+            <ComboBoxItem Content="Sample Item 1" IsSelected="True"/>
+            <ComboBoxItem Content="Sample Item 2"/>
+        </ComboBox>
+    </Grid>
+</UserControl>

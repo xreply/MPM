@@ -1,0 +1,55 @@
+﻿<Page x:Name="xPage"
+    x:Class="MPM.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MPM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="1000">
+
+    <Grid x:Name="gridBody" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SplitView Name="splitMain" IsPaneOpen="True" DisplayMode="Inline" OpenPaneLength="200">
+            <SplitView.Pane>
+                <ListView Name="listMain">
+                    <ListViewItem x:Name="lviInventory" HorizontalAlignment="Stretch" FontSize="16" Padding="5" Tapped="lviInventory_Tapped">
+                        Inventory
+                    </ListViewItem>
+                    <ListViewItem x:Name="lviQuote" HorizontalAlignment="Stretch" FontSize="16" Padding="5" Tapped="lviQuote_Tapped">
+                        Quote
+                    </ListViewItem>
+                    <ListViewItem x:Name="lviEstimates" HorizontalAlignment="Stretch" FontSize="16" Padding="5" Tapped="lviEstimates_Tapped">
+                        Estimates
+                    </ListViewItem>
+                    <ListViewItem x:Name="lviSettings" HorizontalAlignment="Stretch" FontSize="16" Padding="5" Tapped="lviSettings_Tapped">
+                        Settings
+                    </ListViewItem>
+                </ListView>
+            </SplitView.Pane>
+            <Grid>
+                <UserControl Name="MainUserControl" Loaded="MainUserControl_Loaded" />
+            </Grid>
+        </SplitView>
+        <!--<Grid x:Name="gridBackground" Height="1080" Margin="2,0,0,0" Width="1918">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="gridBgCol1" Width="*"/>
+                <ColumnDefinition x:Name="gridBgCol2" Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition x:Name="gridBgRow1" Height="2*"/>
+            </Grid.RowDefinitions>
+            <Border x:Name="gridBorder" Background="#2f5cb6"/>
+            <Border x:Name="gridBorderCol" Grid.Column="1" Background="#1f3d7a"/>-->
+            <!--<Pivot x:Name="pivotMenu" Title="Menu" HorizontalAlignment="Left">
+                <PivotItem Header="Invoicing" ManipulationMode="TranslateY">
+                    <TextBlock Text="Invoice Controls"/>
+                </PivotItem>
+                <PivotItem Header="Inventory">
+                    <TextBlock Text="Inventory Controls"/>
+                </PivotItem>
+                <PivotItem Header="Estimates">
+                    <TextBlock Text="Estimate Controls"/>
+                </PivotItem>
+            </Pivot>-->
+        <!--</Grid>-->
+    </Grid>
+</Page>
