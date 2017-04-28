@@ -52,11 +52,6 @@ namespace MPM
             MainUserControl.Content = qView;
         }
 
-        private void lviEstimates_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            //gridText.Text = "Estimates";
-        }
-
         private void lviSettings_Tapped(object sender, TappedRoutedEventArgs e)
         {
             //gridText.Text = "Settings";

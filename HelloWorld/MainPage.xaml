@@ -17,9 +17,6 @@
                     <ListViewItem x:Name="lviQuote" HorizontalAlignment="Stretch" FontSize="16" Padding="5" Tapped="lviQuote_Tapped">
                         Quote
                     </ListViewItem>
-                    <ListViewItem x:Name="lviEstimates" HorizontalAlignment="Stretch" FontSize="16" Padding="5" Tapped="lviEstimates_Tapped">
-                        Estimates
-                    </ListViewItem>
                     <ListViewItem x:Name="lviSettings" HorizontalAlignment="Stretch" FontSize="16" Padding="5" Tapped="lviSettings_Tapped">
                         Settings
                     </ListViewItem>
@@ -29,6 +26,7 @@
                 <UserControl Name="MainUserControl" Loaded="MainUserControl_Loaded" />
             </Grid>
         </SplitView>
+        
         <!--<Grid x:Name="gridBackground" Height="1080" Margin="2,0,0,0" Width="1918">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition x:Name="gridBgCol1" Width="*"/>

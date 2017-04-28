@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     HorizontalAlignment="Left" VerticalAlignment="Top" Height="667" Width="655">
 
-    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="548">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="667">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="5*"/>
@@ -22,26 +22,33 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="Quote" FontSize="26" HorizontalAlignment="Left" VerticalAlignment="Center" />
-        <TextBlock Grid.Row="5" Text="Sample Text" FontSize="16" VerticalAlignment="Center" Grid.Column="1" Margin="46,7.333,-46,6.667" />
-        <RichEditBox Grid.Row="6" FontSize="16" PlaceholderText="Sample Input" MinWidth="0" MinHeight="0" VerticalAlignment="Center" Grid.Column="1" Margin="10,1.333,-10,2" />
-        <Button Grid.Row="7" Content="Sample Button" FontSize="16" Grid.Column="1" Margin="13,3,0,0" />
-        <CheckBox Grid.Row="3" Content="Sample CheckBox" FontSize="16" HorizontalAlignment="Left" VerticalContentAlignment="Center" MinWidth="0" MinHeight="0" Grid.Column="1" Margin="46,3,0,1.333" />
-        <ComboBox x:Name="ComboBox" Grid.Row="6" FontSize="16" Width="289" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,18.667">
-            <ComboBoxItem Content="Client Name 1" />
-            <ComboBoxItem Content="Client Name 2" />
-        </ComboBox>
-        
+
         <!-- Actual content begins here -->
+
+        <TextBlock Grid.Row="0" Text="Quote" FontSize="26" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <HyperlinkButton Grid.Column="1" Content="Find Existing Quote" FontSize="16" HorizontalAlignment="Right" />
         
-        <HyperlinkButton Grid.Column="1" Content="Find Existing Quote" FontSize="16" />
-        <RichEditBox x:Name="CompanyName" Grid.Row="1" FontSize="16" PlaceholderText="Company Name" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="289" />
+        <RichEditBox x:Name="CompanyName" Grid.Row="1" FontSize="16" PlaceholderText="Company Name" Header="Company Name" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="289" />
         <Button x:Name="AddCompanyName" Grid.Row="1" Content="+" FontSize="20" FontWeight="Bold" Foreground="DodgerBlue" Background="White" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
         <DatePicker Grid.Column="1" Grid.Row="1" FontSize="16" VerticalAlignment="Center" Header="Quote Date" />
-        <RichEditBox x:Name="ProjectType" Grid.Row="2" FontSize="16" PlaceholderText="Project Type" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="289" />
+        
+        <RichEditBox x:Name="ProjectType" Grid.Row="2" FontSize="16" PlaceholderText="Project Type" Header="Project Type" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="289" />
         <Button x:Name="AddProjectType" Grid.Row="2" Content="+" FontSize="20" FontWeight="Bold" Foreground="DodgerBlue" Background="White" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
-        <RichEditBox x:Name="ContactName" Grid.Row="2" Grid.Column="1" FontSize="16" PlaceholderText="Contact Name" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="289" />
+        <RichEditBox x:Name="ContactName" Grid.Row="2" Grid.Column="1" FontSize="16" PlaceholderText="Contact Name" Header="Contact Name" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="289" />
         <Button x:Name="AddContactName" Grid.Row="2" Grid.Column="1" Content="+" FontSize="20" FontWeight="Bold" Foreground="DodgerBlue" Background="White" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
+
+        <TextBlock Grid.Row="3" Text="Add Items" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        
+        <RichEditBox x:Name="NewItemName" Grid.Row="4" FontSize="16" PlaceholderText="Item Name" Header="Item Name" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="289" />
+        <RichEditBox x:Name="NewItemCost" Grid.Row="4" Grid.Column="1" FontSize="16" PlaceholderText="Item Cost" Header="Item Cost" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="289" />
+        <Button x:Name="AddNewItem" Grid.Row="4" Grid.Column="1" Content="+" FontSize="20" FontWeight="Bold" Foreground="DodgerBlue" Background="White" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
+        <ListView x:Name="ItemList" BorderThickness="2" BorderBrush="LightGray" Header="Item List" HorizontalAlignment="Left" Height="250" Margin="10,9.667,0,0" Grid.Row="5" Grid.RowSpan="4" VerticalAlignment="Top" Width="607" Grid.ColumnSpan="2"/>
+
+        <Button x:Name="EmailQuote" Grid.Row="9" Content="Email Quote" FontSize="16" Grid.Column="1" HorizontalAlignment="Left" />
+        <Button x:Name="PrintQuote" Grid.Row="9" Content="Print Quote" FontSize="16" Grid.Column="1" HorizontalAlignment="Center" />
+        <Button x:Name="SaveQuote" Grid.Row="9" Content="Save Quote" FontSize="16" Grid.Column="1" HorizontalAlignment="Right" />
     </Grid>
 </UserControl>
